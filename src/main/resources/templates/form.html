@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cloudinary</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container ,alert alert-success" >
+
+
+
+    <br /><br />
+    <h1>MeMegram file upload anything everything</h1>
+    <form method="POST" action="/add" th:object="${actor}"
+          enctype="multipart/form-data">
+        Name: <input type="text" th:field="*{name}" />
+        Real Name: <input type="text" th:field="*{realname}" />
+
+        HeadLine: <input type="text" th:field="*{headline}" />
+
+        Caption: <input type="text" th:field="*{caption}" /><br />
+
+        Description: <input type="text" th:field="*{description}" />
+
+        <input type="file" name="file" /><br /><br />
+        <input type="submit" value="Click" class="btn btn-light" />
+
+        <img src="https://jnohtr.github.io/paw%20the%20cat%20cafe.png" height="100">
+    </form>
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container, alert alert-success">
+
+
+    <!-<img src="image/paw the cat cafe.png" height="100">->
+        <a href="/">Show All Actors</a><br />
+
+    Name :<span th:text="${actor.name} "></span><br />
+
+    Real :<span th:text="${actor.realname}"></span><br />
+
+    Headline :<p th:text="${actor.headline}"></p>
+
+    Caption :<span th:text="${actor.caption}"></span><br />
+
+    Des :<span th:text="${actor.description}"></span><br />
+
+    <img th:src="${actor.headshot}" /> <img src="https://jnohtr.github.io/paw%20the%20cat%20cafe.png" height="20"><br />
+    <!-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ZLxnPpuqaibF13YAs3Z5hfP5j9ty4b6ZseUfZtAJd0_WEgpp" style="width:166px;height:166px;margin-left:0px;margin-right:0px;margin-top:-1px" class="rg_ic rg_i" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ZLxnPpuqaibF13YAs3Z5hfP5j9ty4b6ZseUfZtAJd0_WEgpp" jsaction="load:str.tbn" alt="Image result for spotlight icon" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)">->
+    <img src="http://www.downloadclipart.net/thumb/58231-theatre-spotlight-icon.png" height="20"><br />
+
+    <a th:href="@{/delete/{id}(id=${actor.id})}">Delete this actor</a>
+
+
+
+</div>
+
+</body>
+</html>
